@@ -1,19 +1,8 @@
 spring:
   application:
     name: eureka-server
-server:
-  port: 8761
-eureka:
-  instance:
-    hostname: localhost
-    prefer-ip-address: true
-  client:
-    register-with-eureka: false #禁止自已做为服务注册到服务上
-    fetch-registry: false #禁止拿注册列表
-    service-url:
-       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/ #注册中心地址
-  server:
-    enable-self-preservation: false
-
-logging:
-  level: trace
+  profiles:
+    active: dev
+  cloud:
+    config:
+      uri: http://139.196.79.91:7003
