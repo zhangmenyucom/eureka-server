@@ -35,5 +35,8 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
     </dependencies>
-
+    <build>
+        <finalName>${project.artifactId}</finalName>
+        <defaultGoal>spring-boot:run</defaultGoal>
+    </build>
 </project>
